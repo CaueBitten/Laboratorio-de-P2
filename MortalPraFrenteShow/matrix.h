@@ -3,6 +3,8 @@
 
 #include "matrizadt.h"
 
+#include <QDebug>
+
 class Matrix : public MatrizADT
 {
 

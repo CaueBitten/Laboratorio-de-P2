@@ -2,6 +2,7 @@
 
 
 //Construtor da Matriz
+
 Matrix::Matrix(int x, int y)
 {
   /* Declaro um array de tamanho x.
@@ -11,12 +12,15 @@ Matrix::Matrix(int x, int y)
    * outro array (esse array será a altura
    * da nossa matriz bidimensional)
    */
+  this->x = x;
+  this->y = y;
   matriz = new double*[x];
 
   for(int i = 0; i < x; i++){     //Corro por esse array da largura até o fim dele
-    for(int j = 0; j < y; j++){   //Crio o array da altura em cada posição do array largura
+    matriz[i] = new double[y];    //Crio o array da altura em cada posição do array largura
+    for(int j = 0; j < y; j++){
 
-        matriz[i] = new double[y];
+        matriz[i][j] = 0;         //Seto os valores com 0 (dependendo da versão do C++, ele não seta todos como 0)
 
     }
   }
